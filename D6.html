@@ -118,17 +118,15 @@
          Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
         */
 
-      const changeUrls = function () {};
-
-      function changeLinksHref(newHref) {
+      const changeUrls = function (newHref) {
         const links = document.querySelectorAll("a");
         links.forEach((link) => {
           if (!link.closest("footer")) {
             link.href = newHref;
           }
         });
-      }
-      changeLinksHref("https://www.google.com");
+      };
+      changeUrls("https://www.google.com");
 
       /* ESERCIZIO 5
          Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
